@@ -1,3 +1,4 @@
+
 // Function to initialize the SOS app link
 
 function initSOSApp() {
@@ -11,3 +12,9 @@ function initSOSApp() {
         console.warn('SOS App button not found');
     }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    initSOSApp();
+
+});
