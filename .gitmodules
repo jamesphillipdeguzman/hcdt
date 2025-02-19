@@ -1,0 +1,3 @@
+[submodule "hcdt"]
+    path = hcdt
+    url = https://github.com/jamesphillipdeguzman/hcdt.git
