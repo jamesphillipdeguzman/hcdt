@@ -233,7 +233,7 @@ function tpvOutofScopeForMTP(answer) {
     flags.tpvOutofScopeForMTP = answer === "yes" ? 1 : 0;
     question = flags.tpvOutofScopeForMTP
         ? "Is the Third Party vehicle insured?"
-        : "Did the Third Party advised they currently have, have been offered or intent on accepting a Hire Car through a Credit Provider or Repairer?";
+        : `Did the Third Party advised they currently have, have been offered or intent on accepting a Hire Car through a Credit Provider or Repairer? Please see <a href="https://cwb.int.corp.sun:443/GTConnect/UnifiedAcceptor/AddKnowContentBase.ViewContentMain/1740110660719?contentId=KM1073260&locale=en-GB" target="_blank">KM1073260</a> to review list of exclusions.`;
     hashText = flags.tpvOutofScopeForMTP ? "#tpvInsured" : "#tpAdvWillUseCreditHireCar";
 
     handleDecisionTree(
