@@ -208,7 +208,7 @@ function ioResponsible2(answer) {
 
     // Determine the next question based on the value of ioResponsible2 flag
     question = flags.ioResponsible2
-        ? "Is the Third Party vehicle NOT covered under the Mission Third Party process (i.e. caravans, boats, taxis, buses, ride share, emergency vehicles, machinery or trucks)?"
+        ? `Is the Third Party vehicle NOT covered under the Mission Third Party process (i.e. caravans, boats, taxis, buses, ride share, emergency vehicles, machinery or trucks)? <br><br>Please see <a href="https://cwb.int.corp.sun:443/GTConnect/UnifiedAcceptor/AddKnowContentBase.ViewContentMain/1740110660719?contentId=KM1073260&locale=en-GB" target="_blank">KM1073260</a> to review list of exclusions.`
         : "Is there a note from Rec&Set that IO is at fault?";  // If ioResponsible2 is 1, ask about third party vehicles
     // If ioResponsible2 is 0, ask about Rec&Set note
 
@@ -233,7 +233,8 @@ function tpvOutofScopeForMTP(answer) {
     flags.tpvOutofScopeForMTP = answer === "yes" ? 1 : 0;
     question = flags.tpvOutofScopeForMTP
         ? "Is the Third Party vehicle insured?"
-        : `Did the Third Party advised they currently have, have been offered or intent on accepting a Hire Car through a Credit Provider or Repairer? Please see <a href="https://cwb.int.corp.sun:443/GTConnect/UnifiedAcceptor/AddKnowContentBase.ViewContentMain/1740110660719?contentId=KM1073260&locale=en-GB" target="_blank">KM1073260</a> to review list of exclusions.`;
+        : "Did the Third Party advised they currently have, have been offered or intent on accepting a Hire Car through a Credit Provider or Repairer?";
+
     hashText = flags.tpvOutofScopeForMTP ? "#tpvInsured" : "#tpAdvWillUseCreditHireCar";
 
     handleDecisionTree(
